@@ -9,6 +9,7 @@ class Snake:
         self.segments = []
         self.create_snake()
         self.head = self.segments[0]
+        self.head.color("green") #Ayırt edilsin diye
 
     def create_snake(self):
         for position in starting_position:
@@ -32,7 +33,19 @@ class Snake:
         new_segment.color("white")
         new_segment.goto(self.segments[len(self.segments) - 1].xcor(), self.segments[len(self.segments) - 1].ycor())
         self.segments.append(new_segment)
+   
+    
+    
+    def snake_reset(self):
+        for seg in self.segments:
+            seg.goto(1050504, 150540)
+        self.segments.clear()
+        self.create_snake()
+        self.head=self.segments[0]
+        self.head.color("green")
 
+        
+        
     def up(self):
 
         self.head.setheading(90)
