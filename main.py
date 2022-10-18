@@ -29,12 +29,14 @@ while game_is_on:
         yemek.refresh()
         yilan.add_tail()
         skor.increase_score()
-    if yilan.head.xcor() > 380 or yilan.head.xcor() < -380 or yilan.head.ycor() > 380 or yilan.head.ycor() < -380:
-        game_is_on = False
-        skor.print_game_over()
+  if yilan.head.xcor() > 380 or yilan.head.xcor() < -380 or yilan.head.ycor() > 380 or yilan.head.ycor() < -380:
+
+        skor.reset()
+        yilan.snake_reset()
     for piksel in yilan.segments[1:]:
 
         if yilan.head.distance(piksel) < 10:
-            game_is_on = False
-            skor.print_game_over()
+
+            skor.reset()
+            yilan.snake_reset()
 ekran.exitonclick()
