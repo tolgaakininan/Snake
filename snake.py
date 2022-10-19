@@ -61,4 +61,6 @@ class Snake:
     def right(self):
         #if self.head.heading()==180
         self.head.setheading(0)
-#EGER fonksiyknlardaki yorum satirlarini komut satirina cevirirseniz yilan 180 derece tersinde hareket edemeyecek ve olmemis olacak
+#eger fonksiyknlardaki yorum satirlarini
+#komut satirina cevirirseniz yilan 180 derece
+#tersinde hareket edemeyecek ve olmemis olacak
